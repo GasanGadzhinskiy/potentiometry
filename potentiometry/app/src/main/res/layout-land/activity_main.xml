@@ -1,0 +1,396 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<TableLayout
+xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content">
+//Шапка таблицы
+
+<TableRow>
+
+    <TextView
+        android:id="@+id/volume_header"
+        android:layout_width="100dp"
+        android:layout_height="match_parent"
+        android:text="@string/volume"
+        android:textColor="@color/colorText"
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/delta_of_volume_header"
+        android:layout_width="100dp"
+        android:layout_height="match_parent"
+        android:text="@string/delta_of_volume"
+        android:textColor="@color/colorText"
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/edf_header"
+        android:layout_width="100dp"
+        android:layout_height="match_parent"
+        android:text="@string/edf"
+        android:textColor="@color/colorText"
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/delta_of_edf_header"
+        android:layout_width="100dp"
+        android:layout_height="match_parent"
+        android:text="@string/delta_of_edf"
+        android:textColor="@color/colorText"
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/first_production_header"
+        android:layout_width="100dp"
+        android:layout_height="match_parent"
+        android:text="@string/first_production"
+        android:textColor="@color/colorText"
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/second_production_header"
+        android:layout_width="130dp"
+        android:layout_height="80dp"
+        android:layout_gravity="fill"
+        android:text="@string/second_production"
+        android:textColor="@color/colorText"
+        android:textSize="24sp" />
+
+    <Button
+        android:id="@+id/calculate_button"
+        style="@style/styleOfButton"
+        android:layout_width="325dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:onClick="calculate_button_Click"
+        android:text="@string/calculate_button_text"
+        android:textColor="@color/colorText"
+        android:textSize="20sp" />
+</TableRow>
+
+//Первая строка
+
+<TableRow>
+
+    <EditText
+        android:id="@+id/volume1"
+        android:layout_height="60dp"
+        android:inputType="numberDecimal"
+        android:textSize="20sp"
+        tools:ignore="LabelFor" />
+
+    <TextView
+        android:layout_height="match_parent"
+        android:textSize="18sp" />
+
+    <EditText
+        android:id="@+id/edf1"
+        android:layout_height="match_parent"
+        android:inputType="numberSigned"
+        android:textSize="20sp"
+        tools:ignore="LabelFor" />
+
+    <TextView
+        android:layout_height="match_parent"
+        android:textSize="18sp" />
+
+    <TextView
+        android:layout_height="match_parent"
+        android:textSize="18sp" />
+
+    <TextView
+        android:layout_height="match_parent"
+        android:textSize="18sp" />
+
+</TableRow>
+
+//Вторая строка
+
+<TableRow>
+
+    <EditText
+        android:id="@+id/volume2"
+        android:layout_height="match_parent"
+        android:inputType="numberDecimal"
+        android:textSize="20sp"
+        tools:ignore="LabelFor" />
+
+    <TextView
+        android:id="@+id/delta_of_volume1"
+        android:layout_height="match_parent"
+        android:textSize="18sp"
+        android:textColor="@color/colorText"
+        android:gravity="top|center" />
+
+    <EditText
+        android:id="@+id/edf2"
+        android:layout_height="match_parent"
+        android:inputType="numberSigned"
+        android:textSize="20sp"
+        tools:ignore="LabelFor" />
+
+    <TextView
+        android:id="@+id/delta_of_edf1"
+        android:layout_height="match_parent"
+        android:textSize="18sp"
+        android:textColor="@color/colorText"
+        android:gravity="top|center" />
+
+    <TextView
+        android:id="@+id/first_production1"
+        android:layout_height="match_parent"
+        android:textSize="18sp"
+        android:textColor="@color/colorText"
+        android:gravity="top|center" />
+
+    <TextView
+        android:id="@+id/second_production1"
+        android:layout_height="match_parent"
+        android:textSize="18sp"
+        android:textColor="@color/colorText"
+        android:gravity="bottom|center" />
+
+    <TextView
+        android:id="@+id/equivalent_volume"
+        android:layout_height="match_parent"
+        android:textSize="18sp"
+        android:textColor="@color/colorText"
+        android:gravity="center" />
+</TableRow>
+
+//Третяя строка
+
+<TableRow>
+
+    <EditText
+        android:id="@+id/volume3"
+        android:layout_width="104dp"
+        android:layout_height="match_parent"
+        android:inputType="numberDecimal"
+        android:textSize="20sp"
+        tools:ignore="LabelFor" />
+
+    <TextView
+        android:id="@+id/delta_of_volume2"
+        android:layout_height="match_parent"
+        android:textSize="18sp"
+        android:textColor="@color/colorText"
+        android:gravity="top|center" />
+
+    <EditText
+        android:id="@+id/edf3"
+        android:layout_height="match_parent"
+        android:inputType="numberSigned"
+        android:textSize="20sp"
+        tools:ignore="LabelFor" />
+
+    <TextView
+        android:id="@+id/delta_of_edf2"
+        android:layout_height="match_parent"
+        android:textSize="18sp"
+        android:textColor="@color/colorText"
+        android:gravity="top|center" />
+
+    <TextView
+        android:id="@+id/first_production2"
+        android:layout_height="match_parent"
+        android:textSize="18sp"
+        android:textColor="@color/colorText"
+        android:gravity="top|center" />
+
+    <TextView
+        android:id="@+id/second_production2"
+        android:layout_height="match_parent"
+        android:textSize="18sp"
+        android:textColor="@color/colorText"
+        android:gravity="bottom|center" />
+</TableRow>
+
+//Четвертая строка
+
+<TableRow>
+
+    <EditText
+        android:id="@+id/volume4"
+        android:layout_height="match_parent"
+        android:inputType="numberDecimal"
+        android:textSize="20sp"
+        tools:ignore="LabelFor" />
+
+    <TextView
+        android:id="@+id/delta_of_volume3"
+        android:layout_height="match_parent"
+        android:textSize="18sp"
+        android:textColor="@color/colorText"
+        android:gravity="top|center" />
+
+    <EditText
+        android:id="@+id/edf4"
+        android:layout_height="match_parent"
+        android:inputType="numberSigned"
+        android:textSize="20sp"
+        tools:ignore="LabelFor" />
+
+    <TextView
+        android:id="@+id/delta_of_edf3"
+        android:layout_height="match_parent"
+        android:textSize="18sp"
+        android:textColor="@color/colorText"
+        android:gravity="top|center" />
+
+    <TextView
+        android:id="@+id/first_production3"
+        android:layout_height="match_parent"
+        android:textColor="@color/colorText"
+        android:textSize="18sp"
+        android:gravity="top|center" />
+
+    <TextView
+        android:id="@+id/second_production3"
+        android:layout_height="match_parent"
+        android:textSize="18sp"
+        android:textColor="@color/colorText"
+        android:gravity="bottom|center" />
+</TableRow>
+
+//Пятая строка
+
+<TableRow>
+
+    <EditText
+        android:id="@+id/volume5"
+        android:layout_height="match_parent"
+        android:inputType="numberDecimal"
+        android:textSize="20sp"
+        tools:ignore="LabelFor" />
+
+    <TextView
+        android:id="@+id/delta_of_volume4"
+        android:layout_height="match_parent"
+        android:textSize="18sp"
+        android:textColor="@color/colorText"
+        android:gravity="top|center" />
+
+    <EditText
+        android:id="@+id/edf5"
+        android:layout_height="match_parent"
+        android:inputType="numberSigned"
+        android:textSize="20sp"
+        tools:ignore="LabelFor" />
+
+    <TextView
+        android:id="@+id/delta_of_edf4"
+        android:layout_height="match_parent"
+        android:textSize="18sp"
+        android:textColor="@color/colorText"
+        android:gravity="top|center" />
+
+    <TextView
+        android:id="@+id/first_production4"
+        android:layout_height="match_parent"
+        android:textColor="@color/colorText"
+        android:textSize="18sp"
+        android:gravity="top|center" />
+
+    <TextView
+        android:id="@+id/second_production4"
+        android:layout_height="match_parent"
+        android:textSize="18sp"
+        android:textColor="@color/colorText"
+        android:gravity="bottom|center" />
+</TableRow>
+
+//Шестая строка
+
+<TableRow>
+
+    <EditText
+        android:id="@+id/volume6"
+        android:layout_height="match_parent"
+        android:inputType="numberDecimal"
+        android:textSize="20sp"
+        tools:ignore="LabelFor" />
+
+    <TextView
+        android:id="@+id/delta_of_volume5"
+        android:layout_height="match_parent"
+        android:textSize="18sp"
+        android:textColor="@color/colorText"
+        android:gravity="top|center" />
+
+    <EditText
+        android:id="@+id/edf6"
+        android:layout_height="match_parent"
+        android:inputType="numberSigned"
+        android:textSize="20sp"
+        tools:ignore="LabelFor" />
+
+    <TextView
+        android:id="@+id/delta_of_edf5"
+        android:layout_height="match_parent"
+        android:textSize="18sp"
+        android:textColor="@color/colorText"
+        android:gravity="top|center" />
+
+    <TextView
+        android:id="@+id/first_production5"
+        android:layout_height="match_parent"
+        android:textColor="@color/colorText"
+        android:textSize="18sp"
+        android:gravity="top|center" />
+
+    <TextView
+        android:id="@+id/second_production5"
+        android:layout_height="match_parent"
+        android:textSize="18sp"
+        android:textColor="@color/colorText"
+        android:gravity="bottom|center" />
+</TableRow>
+
+//Седьмая строка
+
+<TableRow>
+
+    <EditText
+        android:id="@+id/volume7"
+        android:layout_height="match_parent"
+        android:inputType="numberDecimal"
+        android:textSize="20sp"
+        tools:ignore="LabelFor" />
+
+    <TextView
+        android:id="@+id/delta_of_volume6"
+        android:layout_height="match_parent"
+        android:textSize="18sp"
+        android:textColor="@color/colorText"
+        android:gravity="top|center" />
+
+    <EditText
+        android:id="@+id/edf7"
+        android:layout_height="match_parent"
+        android:inputType="numberSigned"
+        android:textSize="20sp"
+        tools:ignore="LabelFor" />
+
+    <TextView
+        android:id="@+id/delta_of_edf6"
+        android:layout_height="match_parent"
+        android:textSize="18sp"
+        android:textColor="@color/colorText"
+        android:gravity="top|center" />
+
+    <TextView
+        android:id="@+id/first_production6"
+        android:layout_height="match_parent"
+        android:textColor="@color/colorText"
+        android:textSize="18sp"
+        android:gravity="top|center" />
+
+    <TextView
+        android:layout_height="match_parent"
+        android:textSize="18sp" />
+</TableRow>
+
+</TableLayout>

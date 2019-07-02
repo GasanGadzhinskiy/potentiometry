@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">potentiometry</string>
+    <string name="volume">V, мл</string>
+    <string name="delta_of_volume">del V</string>
+    <string name="edf">E, мВ</string>
+    <string name="delta_of_edf">del E</string>
+    <string name="first_production">del E / del V</string>
+    <string name="second_production">del(del E / del V) = A</string>
+    <string name="calculate_button_text">Вычислить</string>
+</resources>
